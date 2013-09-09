@@ -3,8 +3,8 @@
 * Author: Steven Sacks
 *
 * blog: http://www.stevensacks.net/
-* git: https://github.com/stevensacks/Gaia-Framework
-* support: http://gaiaflashframework.tenderapp.com/
+* forum: http://www.gaiaflashframework.com/forum/
+* wiki: http://www.gaiaflashframework.com/wiki/
 * 
 * By using the Gaia Framework, you agree to keep the above contact information in the source code.
 * 
@@ -43,7 +43,8 @@ class com.gaiaframework.assets.MovieClipAsset extends AbstractAsset
 	}
 	public function preload():Void
 	{
-		_content.loadMovie(src);
+		//_content.loadMovie(src);
+		_content.loadMovie(CacheBuster.version(src));
 		super.load();
 	}
 	public function load():Void
